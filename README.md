@@ -9,6 +9,8 @@ A small expense and monthly budget tracker with a responsive HTML/CSS/JavaScript
 3. Start the application from the project root: `uvicorn backend.main:app --reload`
 4. Open [http://127.0.0.1:8000](http://127.0.0.1:8000). Interactive API documentation is at `/docs`.
 
+For deployment platforms configured with the common `uvicorn main:app` start command, the root `main.py` re-exports the FastAPI app from `backend/main.py`. Run either command from the project root.
+
 The SQLite database is created at `backend/expense_tracker.db` on first startup. Set `EXPENSE_TRACKER_DB` to use a different database file. On startup, the built-in `Food & Dining` category is renamed to `Food & Drinks` in existing databases, preserving associated expenses and budgets.
 
 ## Features
