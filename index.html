@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Pocket — Expense & Budget Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <section class="auth-screen" id="auth-screen">
+      <div class="auth-layout">
+        <aside class="auth-story" aria-label="About Pocket">
+          <span class="currency-float currency-float-dollar" aria-hidden="true">$</span>
+          <span class="currency-float currency-float-rupee" aria-hidden="true">₹</span>
+          <span class="currency-float currency-float-cent" aria-hidden="true">¢</span>
+          <span class="currency-float currency-float-euro" aria-hidden="true">€</span>
+          <span class="currency-float currency-float-paisa" aria-hidden="true">p</span>
+          <div class="story-topline"><span class="story-spark">✳</span> PERSONAL MONEY, MADE SIMPLE</div>
+          <div class="story-copy">
+            <p class="story-kicker">A happier way to handle money.</p>
+            <h2>Big plans.<br />Little steps.</h2>
+            <p>Make sense of your spending, celebrate your progress, and save for the stuff you really love.</p>
+          </div>
+          <div class="story-illustration" aria-hidden="true">
+            <svg class="story-art" viewBox="0 0 420 330" role="presentation">
+              <ellipse cx="211" cy="294" rx="119" ry="13" fill="#382aa5" fill-opacity=".18" />
+              <path d="M72 234c24-71 81-118 145-118s121 47 145 118" fill="none" stroke="#b5a8ff" stroke-linecap="round" stroke-width="2" />
+              <path d="M91 248c21-48 66-79 126-79s105 31 126 79" fill="none" stroke="#ffffff" stroke-opacity=".22" stroke-linecap="round" stroke-width="2" />
+              <rect x="98" y="211" width="48" height="73" rx="16" transform="rotate(-13 98 211)" fill="#ffcf5c" />
+              <rect x="153" y="179" width="53" height="104" rx="17" transform="rotate(-4 153 179)" fill="#ff8c75" />
+              <rect x="215" y="192" width="52" height="91" rx="17" transform="rotate(7 215 192)" fill="#7ed8c3" />
+              <rect x="273" y="222" width="47" height="62" rx="16" transform="rotate(14 273 222)" fill="#93a7ff" />
+              <circle cx="211" cy="119" r="62" fill="#ffcf5c" />
+              <circle cx="211" cy="119" r="50" fill="none" stroke="#fff1b9" stroke-width="2" />
+              <text x="211" y="137" fill="#5143c7" font-family="Manrope, sans-serif" font-size="52" font-weight="800" text-anchor="middle">₹</text>
+              <g transform="rotate(-12 121 76)">
+                <circle cx="121" cy="76" r="31" fill="#5947d0" fill-opacity=".35" />
+                <circle cx="121" cy="71" r="31" fill="#7ee0c6" />
+                <circle cx="121" cy="71" r="24" fill="none" stroke="#d7fff2" stroke-opacity=".8" stroke-width="2" />
+                <text x="121" y="82" fill="#286e6c" font-family="Manrope, sans-serif" font-size="31" font-weight="800" text-anchor="middle">$</text>
+              </g>
+              <g transform="rotate(12 303 195)">
+                <circle cx="303" cy="195" r="27" fill="#493ab8" fill-opacity=".35" />
+                <circle cx="303" cy="190" r="27" fill="#ff917d" />
+                <circle cx="303" cy="190" r="20" fill="none" stroke="#ffe2d8" stroke-opacity=".9" stroke-width="2" />
+                <text x="303" y="199" fill="#853f65" font-family="Manrope, sans-serif" font-size="24" font-weight="800" text-anchor="middle">₹</text>
+              </g>
+              <path d="m111 112 7 15 16 2-12 11 3 16-14-8-14 8 3-16-12-11 16-2Z" fill="#ffcf5c" />
+              <path d="m307 117 5 10 11 2-8 8 2 11-10-5-10 5 2-11-8-8 11-2Z" fill="#7ed8c3" />
+              <circle cx="111" cy="178" r="7" fill="#ff8c75" />
+              <circle cx="315" cy="176" r="5" fill="#ffcf5c" />
+              <path d="M124 290h172" stroke="#ffffff" stroke-opacity=".45" stroke-linecap="round" stroke-width="3" />
+            </svg>
+          </div>
+          <p class="story-footer"><span>●</span> Your finances stay yours. Always.</p>
+        </aside>
+        <div class="auth-card">
+          <a class="brand auth-brand" href="#" aria-label="Pocket">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 40 40" role="img">
+                <path d="M10 14.5v-2A3.5 3.5 0 0 1 13.5 9h13" />
+                <path d="M9 15h22a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V17a2 2 0 0 1 2-2Z" />
+                <path d="M25 21h8v7h-8a3.5 3.5 0 0 1 0-7Z" />
+                <circle cx="26" cy="24.5" r="1" class="brand-coin-dot" />
+                <circle cx="29" cy="9" r="7" class="brand-coin" />
+                <path d="M26 6.5h6M26 8.7h6M27.2 6.6c2.7 0 2.7 4.3 0 4.3h-1l3.7 3.2" class="brand-rupee" />
+              </svg>
+            </span><span>pocket<span class="brand-dot">.</span></span>
+          </a>
+          <p class="eyebrow">YOUR MONEY, YOUR WAY</p>
+          <h1 id="auth-heading">Welcome back</h1>
+          <p class="auth-subheading" id="auth-subheading">Sign in to continue to your personal expense tracker.</p>
+          <div class="auth-tabs" role="tablist" aria-label="Account access">
+            <button class="auth-tab active" type="button" data-auth-mode="login" role="tab" aria-selected="true">Log in</button>
+            <button class="auth-tab" type="button" data-auth-mode="register" role="tab" aria-selected="false">Create account</button>
+          </div>
+          <p class="auth-message" id="auth-message" role="alert"></p>
+          <form id="auth-login-form" class="auth-form">
+            <div class="field"><label for="login-user-id">User ID or email</label><input id="login-user-id" name="user_id" autocomplete="username" required /></div>
+            <div class="field"><label for="login-password">Password</label><input id="login-password" name="password" type="password" autocomplete="current-password" required /></div>
+            <button class="button button-primary full-button" type="submit">Log in</button>
+          </form>
+          <form id="auth-register-form" class="auth-form hidden">
+            <div class="field"><label for="register-user-id">User ID or email</label><input id="register-user-id" name="user_id" autocomplete="username" minlength="3" maxlength="40" required /><small class="form-help">3–40 characters: start with a letter or number; use letters, numbers, periods, underscores, hyphens, @, or +.</small></div>
+            <div class="field"><label for="register-password">Password</label><input id="register-password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required /><small class="form-help">Use at least 8 characters.</small></div>
+            <p class="auth-data-note">Your account’s tracker data is private. On an existing installation, the first account also takes ownership of the data already saved there.</p>
+            <button class="button button-primary full-button" type="submit">Create account</button>
+          </form>
+          <p class="auth-footnote">Simple tools for a more intentional life.</p>
+        </div>
+      </div>
+    </section>
+    <div class="app-shell hidden" id="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#" data-page="dashboard" aria-label="Pocket home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" role="img">
+              <path d="M10 14.5v-2A3.5 3.5 0 0 1 13.5 9h13" />
+              <path d="M9 15h22a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V17a2 2 0 0 1 2-2Z" />
+              <path d="M25 21h8v7h-8a3.5 3.5 0 0 1 0-7Z" />
+              <circle cx="26" cy="24.5" r="1" class="brand-coin-dot" />
+              <circle cx="29" cy="9" r="7" class="brand-coin" />
+              <path d="M26 6.5h6M26 8.7h6M27.2 6.6c2.7 0 2.7 4.3 0 4.3h-1l3.7 3.2" class="brand-rupee" />
+            </svg>
+          </span><span>pocket<span class="brand-dot">.</span></span>
+        </a>
+        <div class="sidebar-label">MENU</div>
+        <nav class="nav-list" aria-label="Main navigation">
+          <button class="nav-item active" data-page="dashboard"><span class="nav-icon">◫</span>Dashboard</button>
+          <button class="nav-item" data-page="expenses"><span class="nav-icon">↗</span>Expenses</button>
+          <button class="nav-item" data-page="budgets"><span class="nav-icon">▤</span>Budgets</button>
+          <button class="nav-item" data-page="categories"><span class="nav-icon">◈</span>Categories</button>
+          <button class="nav-item" data-page="reports"><span class="nav-icon">▥</span>Reports</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="tip-card">
+            <span class="tip-spark">✳</span>
+            <strong>Small steps add up.</strong>
+            <p>Keep an eye on your spending and make your goals happen.</p>
+          </div>
+          <div class="profile">
+            <div class="avatar">Y</div><div><strong>Your wallet</strong><span>Personal account</span></div>
+            <span class="profile-menu">···</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumb"><strong id="breadcrumb-page">Dashboard</strong></div>
+          <div class="topbar-actions">
+            <label class="month-picker"><span>◷</span><input id="month-picker" type="month" aria-label="Select month" /></label>
+            <button class="icon-button" id="top-search-button" aria-label="Search expenses">⌕</button>
+            <div class="account-menu">
+              <button class="top-avatar" id="account-menu-button" type="button" aria-label="Open account information" aria-haspopup="true" aria-expanded="false" aria-controls="account-popover">Y</button>
+              <section class="account-popover hidden" id="account-popover" aria-labelledby="account-user-id">
+                <div class="account-popover-heading">
+                  <span class="account-avatar-large" id="account-avatar-large">Y</span>
+                  <div><span class="account-greeting">YOUR POCKET</span><h2 id="account-user-id">Your account</h2></div>
+                </div>
+                <div class="account-details">
+                  <div><span>Account type</span><strong>Personal account</strong></div>
+                  <div><span>Session</span><strong><i class="session-indicator"></i>Signed in</strong></div>
+                  <div><span>Privacy</span><strong>Private tracker</strong></div>
+                </div>
+                <p class="account-note">Your expenses and budgets are private to your account.</p>
+              </section>
+            </div>
+            <button class="button button-outline" id="logout-button" type="button">Log out</button>
+          </div>
+        </header>
+
+        <section class="page-view" id="page-dashboard">
+          <div class="page-heading">
+            <div><p class="eyebrow" id="today-label">YOUR FINANCIAL SNAPSHOT</p><h1>Good morning <span class="wave">✳</span></h1><p class="subheading">Here’s what’s happening with your money.</p></div>
+            <div class="heading-actions"><button class="button button-outline" data-action="set-savings">Monthly savings</button><button class="button button-outline" data-action="set-salary">Set salary</button><button class="button button-primary" data-action="add-expense"><span>＋</span> Add expense</button></div>
+          </div>
+          <div class="stat-grid">
+            <article class="stat-card accent-card"><div class="stat-top"><span>Total spent</span><span class="stat-icon">↗</span></div><div class="stat-value" id="stat-spent">—</div><div class="stat-foot"><span class="dot dot-coral"></span> This month</div><div class="stat-watermark">↗</div></article>
+            <article class="stat-card"><div class="stat-top"><span>Monthly salary</span><span class="stat-icon icon-lilac">₹</span></div><div class="stat-value" id="stat-salary">—</div><div class="stat-foot"><span class="dot dot-lilac"></span><button class="stat-link" id="salary-foot" data-action="set-salary">Set salary for this month</button></div></article>
+            <article class="stat-card"><div class="stat-top"><span>Monthly savings</span><span class="stat-icon icon-mint">↗</span></div><div class="stat-value" id="stat-savings">—</div><div class="stat-foot"><span class="dot dot-mint"></span><button class="stat-link" id="savings-foot" data-action="set-savings">Set monthly savings</button></div></article>
+            <article class="stat-card"><div class="stat-top"><span>Salary remaining</span><span class="stat-icon icon-mint">⌁</span></div><div class="stat-value" id="stat-remaining">—</div><div class="stat-foot"><span class="dot dot-mint"></span><span id="remaining-foot">Salary minus spending and savings</span></div></article>
+            <article class="stat-card"><div class="stat-top"><span>Transactions</span><span class="stat-icon icon-yellow">≡</span></div><div class="stat-value" id="stat-count">—</div><div class="stat-foot"><span class="dot dot-yellow"></span> This month</div></article>
+          </div>
+          <div class="dashboard-grid">
+            <article class="panel spending-panel">
+              <div class="panel-heading"><div><h2>Spending overview</h2><p>Where each rupee went this month</p></div><button class="text-button" data-page="reports">View report <span>→</span></button></div>
+              <div class="chart-area"><div class="donut-wrap"><div class="donut" id="dashboard-donut"><div class="donut-center"><strong id="donut-total">—</strong><span>spent</span></div></div></div><div class="legend" id="dashboard-legend"><div class="empty-note">Add expenses to see your spending breakdown.</div></div></div>
+            </article>
+            <article class="panel budget-panel">
+              <div class="panel-heading"><div><h2>Budget overview</h2><p>Your monthly limit</p></div><button class="more-button" data-page="budgets">···</button></div>
+              <div class="budget-circle" id="budget-circle" role="img" aria-label="No budget set"><div><strong id="budget-percent">—</strong><span id="budget-percent-label">no budget</span></div></div>
+              <div class="budget-summary"><span><i class="dot dot-coral"></i>Budgeted categories spent</span><strong id="budget-spent">—</strong></div>
+              <div class="budget-summary"><span><i class="dot dot-light"></i>Budget</span><strong id="budget-total">—</strong></div>
+              <p class="budget-status" id="budget-status">Set a category budget to track progress.</p>
+              <button class="button button-soft full-button" data-page="budgets">Manage budgets <span>→</span></button>
+            </article>
+          </div>
+          <article class="panel trend-panel">
+            <div class="panel-heading"><div><h2>Income, spending & savings</h2><p>Your monthly salary, expenses, and savings</p></div><div class="trend-legend"><span><i class="trend-key trend-key-income"></i>Salary</span><span><i class="trend-key trend-key-spent"></i>Spent</span><span><i class="trend-key trend-key-savings"></i>Saved</span></div></div>
+            <div class="trend-chart" id="trend-chart" aria-label="Monthly salary, spending, and savings for the last six months"></div>
+          </article>
+          <article class="panel recent-panel">
+            <div class="panel-heading"><div><h2>Recent expenses</h2><p>Your latest transactions</p></div><button class="text-button" data-page="expenses">See all <span>→</span></button></div>
+            <div class="table-wrap"><table><thead><tr><th>NAME</th><th>CATEGORY</th><th>DATE</th><th>AMOUNT</th><th></th></tr></thead><tbody id="recent-body"></tbody></table></div>
+          </article>
+        </section>
+
+        <section class="page-view hidden" id="page-expenses">
+          <div class="page-heading"><div><p class="eyebrow">KEEP TRACK OF THE LITTLE THINGS</p><h1>Expenses</h1><p class="subheading">All your spending, in one place.</p></div><button class="button button-primary" data-action="add-expense"><span>＋</span> Add expense</button></div>
+          <article class="panel list-panel">
+            <div class="toolbar"><div class="search-box"><span>⌕</span><input id="expense-search" placeholder="Search expenses..." /><kbd>⌘ K</kbd></div><select id="category-filter" aria-label="Filter by category"><option value="">All categories</option></select><div class="date-filter"><input id="date-from" type="date" aria-label="From date" /><span>to</span><input id="date-to" type="date" aria-label="To date" /></div></div>
+            <div class="table-wrap"><table><thead><tr><th>NAME</th><th>CATEGORY</th><th>DATE</th><th>AMOUNT</th><th></th></tr></thead><tbody id="expenses-body"></tbody></table></div>
+            <div class="table-footer"><span id="expense-count-label">0 expenses</span><button class="button button-small button-outline" data-action="clear-filters">Clear filters</button></div>
+          </article>
+        </section>
+
+        <section class="page-view hidden" id="page-budgets">
+          <div class="page-heading"><div><p class="eyebrow">SPEND WITH A PLAN</p><h1>Budgets</h1><p class="subheading">Set a monthly limit for each category.</p></div><button class="button button-primary" data-action="add-budget"><span>＋</span> Add budget</button></div>
+          <div class="budget-summary-cards" id="budget-summary-cards"></div>
+          <article class="panel list-panel"><div class="panel-heading standalone-heading"><div><h2>All budgets</h2><p id="budget-month-label">Your monthly category limits</p></div></div><div class="table-wrap"><table><thead><tr><th>CATEGORY</th><th>MONTH</th><th>SPENT</th><th>BUDGET</th><th>PROGRESS</th><th></th></tr></thead><tbody id="budgets-body"></tbody></table></div></article>
+        </section>
+
+        <section class="page-view hidden" id="page-categories">
+          <div class="page-heading"><div><p class="eyebrow">GIVE EVERY RUPEE A HOME</p><h1>Categories</h1><p class="subheading">Organize your spending your way.</p></div><button class="button button-primary" data-action="add-category"><span>＋</span> Add category</button></div>
+          <div class="category-grid" id="category-grid"></div>
+        </section>
+
+        <section class="page-view hidden" id="page-reports">
+          <div class="page-heading"><div><p class="eyebrow">THE BIGGER PICTURE</p><h1>Reports</h1><p class="subheading">A closer look at your monthly spending.</p></div><div class="heading-actions"><button class="button button-outline" data-action="set-savings">Monthly savings</button><button class="button button-outline" data-action="set-salary">Set salary</button><button class="button button-outline" id="download-report">↓ Export CSV</button></div></div>
+          <div class="report-stats" id="report-stats"></div>
+          <div class="report-grid"><article class="panel report-chart-panel"><div class="panel-heading"><div><h2>Daily spending</h2><p>Spending by day this month</p></div></div><div class="bar-chart" id="daily-chart"></div></article><article class="panel report-category-panel"><div class="panel-heading"><div><h2>By category</h2><p>Spending compared to budget</p></div></div><div id="report-categories"></div></article></div>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal-backdrop hidden" id="modal-backdrop">
+      <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-header"><div><p class="eyebrow" id="modal-eyebrow">YOUR MONEY, YOUR WAY</p><h2 id="modal-title"></h2></div><button class="modal-close" id="modal-close" aria-label="Close">×</button></div>
+        <div id="modal-content"></div>
+      </section>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>
