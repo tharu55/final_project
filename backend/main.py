@@ -20,6 +20,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 
+
 BASE_DIR = Path(__file__).resolve().parent
 STATIC_DIR = BASE_DIR.parent / "static"
 DATABASE_PATH = Path(os.getenv("EXPENSE_TRACKER_DB", BASE_DIR / "expense_tracker.db"))

@@ -44,12 +44,22 @@ function currentMonthLabel() {
 
 function toast(message, isError = false) {
   const element = $("#toast");
-  element.textContent = message;
+  const isDeletion = !isError && /\bdeleted\./i.test(message);
+  $("#toast-title").textContent = isError ? "Oof, that didn't work" : isDeletion ? "Poof! It's gone ✨" : "Nice, you're all set!";
+  $("#toast-message").textContent = message;
+  $("#toast-icon").textContent = isError ? "!" : "✓";
   element.classList.toggle("error", isError);
-  element.classList.add("show");
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => element.classList.remove("show"), 3000);
+  element.classList.remove("show");
+  void element.offsetWidth;
+  element.classList.add("show");
+  toastTimer = setTimeout(() => element.classList.remove("show"), 4200);
 }
+
+$("#toast-dismiss").addEventListener("click", () => {
+  clearTimeout(toastTimer);
+  $("#toast").classList.remove("show");
+});
 
 function setAuthMode(mode) {
   authMode = mode;
@@ -199,6 +209,11 @@ async function loadDashboard() {
   $("#stat-savings").textContent = data.savings === null ? "—" : money(data.savings);
   $("#savings-foot").textContent = data.savings === null ? "Set monthly savings" : "Edit monthly savings";
   $("#stat-remaining").textContent = data.salary_remaining === null ? "—" : money(data.salary_remaining);
+  $("#stat-remaining").style.setProperty(
+    "color",
+    data.salary_remaining !== null && Number(data.salary_remaining) < 0 ? "#c62828" : "var(--ink)",
+    "important",
+  );
   $("#stat-count").textContent = data.expense_count;
   $("#donut-total").textContent = money(data.spent);
   $("#budget-spent").textContent = money(data.budgeted_spent);

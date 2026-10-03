@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=4" />
   </head>
   <body>
     <section class="auth-screen" id="auth-screen">
@@ -224,7 +224,12 @@
         <div id="modal-content"></div>
       </section>
     </div>
-    <div class="toast" id="toast" role="status"></div>
-    <script src="app.js"></script>
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+      <span class="toast-icon" id="toast-icon" aria-hidden="true"></span>
+      <span class="toast-copy"><strong id="toast-title"></strong><span id="toast-message"></span></span>
+      <button class="toast-dismiss" id="toast-dismiss" type="button" aria-label="Dismiss notification">×</button>
+      <span class="toast-progress" aria-hidden="true"></span>
+    </div>
+    <script src="app.js?v=4"></script>
   </body>
 </html>

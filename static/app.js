@@ -199,6 +199,11 @@ async function loadDashboard() {
   $("#stat-savings").textContent = data.savings === null ? "—" : money(data.savings);
   $("#savings-foot").textContent = data.savings === null ? "Set monthly savings" : "Edit monthly savings";
   $("#stat-remaining").textContent = data.salary_remaining === null ? "—" : money(data.salary_remaining);
+  $("#stat-remaining").style.setProperty(
+    "color",
+    data.salary_remaining !== null && Number(data.salary_remaining) < 0 ? "#c62828" : "var(--ink)",
+    "important",
+  );
   $("#stat-count").textContent = data.expense_count;
   $("#donut-total").textContent = money(data.spent);
   $("#budget-spent").textContent = money(data.budgeted_spent);
